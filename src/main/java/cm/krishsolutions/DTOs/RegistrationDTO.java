@@ -76,4 +76,8 @@ public class RegistrationDTO {
     public void setHobbies(String[] hobbies) {
         this.hobbies = hobbies;
     }
+
+    public String setHelloString() {
+        return "hello";
+    }
 }
