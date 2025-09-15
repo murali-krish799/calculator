@@ -39,6 +39,7 @@ public class UserMailDetailsService {
 
 
     public SimpleMailMessage simpleMailMessage(DestinationDTO destinationDTO, String userName) {
+        System.out.println("add git new version");
 
         SimpleMailMessage message = new SimpleMailMessage();
         message.setTo(destinationDTO.getToMail());
