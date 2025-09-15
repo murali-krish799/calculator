@@ -14,7 +14,7 @@ Result calculated here and response given below:<br/>
 ${userDTO.name} & ${userDTO.crushName} are <span style="color:red;"> friends</span> only...
 <br/>
 <br/>
-<a href="mailPage">Send to Mail</a><br/><br/>
+<a href="userMailDetails">Send to Mail</a><br/><br/>
 <a href="/spring-mvc-love-calculator">backToHome</a>
 </div>
 </body>
