@@ -11,8 +11,8 @@
 
 
     <hr/>
+Destination reached to  <span style="color:green;">${destinationDTO.toMail}</span>
 
-Mail Is ${ReceivedMail}
 <a href="processHome">backToHome</a>
 </div>
 </body>

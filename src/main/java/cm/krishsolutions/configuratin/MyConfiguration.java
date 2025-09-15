@@ -15,6 +15,7 @@ import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
+
 @EnableWebMvc
 @Configuration
 @ComponentScan(basePackages = {"cm.krishsolutions"})
@@ -33,20 +34,19 @@ public class MyConfiguration implements WebMvcConfigurer {
         return viewResolver;
     }
 
-
-    @Bean
-    public LocalValidatorFactoryBean validator() {
-        LocalValidatorFactoryBean factoryBean = new LocalValidatorFactoryBean();
-        factoryBean.setValidationMessageSource(messageSource());
-        return factoryBean;
-    }
-
     @Bean
     public MessageSource messageSource() {
         ResourceBundleMessageSource messageSource =
                 new ResourceBundleMessageSource();
         messageSource.setBasename("ValidationMessages.properties"); // loads custom-messages.properties
         return messageSource;
+    }
+
+    @Bean
+    public LocalValidatorFactoryBean validator() {
+        LocalValidatorFactoryBean factoryBean = new LocalValidatorFactoryBean();
+        factoryBean.setValidationMessageSource(messageSource());
+        return factoryBean;
     }
 
 
